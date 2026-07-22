@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astra VPN — Свобода без границ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===================== HEADER / NAV ===================== -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">
+        <span class="logo-icon">🛡️</span>
+        <span class="logo-text">Astra VPN</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#features">Возможности</a></li>
+        <li><a href="#servers">Серверы</a></li>
+        <li><a href="#pricing">Тарифы</a></li>
+        <li><a href="#faq">Документация</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#" class="btn btn-ghost">Войти</a>
+        <a href="#" class="btn btn-primary">Начать</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero container">
+    <a href="#" class="badge">Вышла новая версия Astra VPN 3.0 — что нового →</a>
+
+    <h1 class="hero-title">
+      Подключись к сети без слежки, блокировок и ограничений
+    </h1>
+
+    <p class="hero-subtitle">
+      Быстрый и надёжный VPN-сервис с шифрованием военного уровня и серверами
+      в 60+ странах. Подключайся в один клик и работай в интернете свободно.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#" class="btn btn-primary btn-lg">Начать бесплатно</a>
+      <a href="#" class="btn btn-secondary btn-lg">Github</a>
+    </div>
+
+    <!-- Скриншот приложения / дашборд -->
+    <div class="app-preview">
+      <div class="app-window">
+        <div class="app-topbar">
+          <div class="app-user">
+            <span class="avatar"></span>
+            <span>Алиса Кочева</span>
+          </div>
+          <div class="app-tabs">
+            <span>Обзор</span>
+            <span>Устройства</span>
+            <span>Серверы</span>
+            <span>Настройки</span>
+          </div>
+          <div class="app-search">
+            <input type="text" placeholder="Поиск сервера...">
+          </div>
+        </div>
+
+        <div class="app-body">
+          <div class="app-header-row">
+            <h2>Панель управления</h2>
+            <div class="app-header-actions">
+              <span>20 янв — 8 фев 2026</span>
+              <button class="btn btn-small">Скачать журнал</button>
+            </div>
+          </div>
+
+          <div class="app-tabs-secondary">
+            <span class="active">Обзор</span>
+            <span>Трафик</span>
+            <span>Отчёты</span>
+            <span>Уведомления</span>
+          </div>
+
+          <div class="stat-cards">
+            <div class="stat-card">
+              <span class="stat-label">Скрыто данных</span>
+              <span class="stat-value">45 231,89 ГБ</span>
+              <span class="stat-delta">+18% за месяц</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Активных подключений</span>
+              <span class="stat-value">+2350</span>
+              <span class="stat-delta">+12% за месяц</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Серверов онлайн</span>
+              <span class="stat-value">12 234</span>
+              <span class="stat-delta">+9% за месяц</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Устройств в сети</span>
+              <span class="stat-value">+573</span>
+              <span class="stat-delta">+201 за месяц</span>
+            </div>
+          </div>
+
+          <div class="app-grid">
+            <div class="chart-card">
+              <h3>Активность подключений</h3>
+              <div class="chart-placeholder"></div>
+            </div>
+
+            <div class="activity-card">
+              <h3>Последние подключения</h3>
+              <p class="muted">Всего 265 сессий в этом месяце</p>
+              <ul class="activity-list">
+                <li>
+                  <span class="avatar small"></span>
+                  <div>
+                    <strong>Сервер: Нидерланды</strong>
+                    <small>ip-hidden@astra.vpn</small>
+                  </div>
+                  <span class="amount">128 мс</span>
+                </li>
+                <li>
+                  <span class="avatar small"></span>
+                  <div>
+                    <strong>Сервер: Германия</strong>
+                    <small>ip-hidden@astra.vpn</small>
+                  </div>
+                  <span class="amount">94 мс</span>
+                </li>
+                <li>
+                  <span class="avatar small"></span>
+                  <div>
+                    <strong>Сервер: Сингапур</strong>
+                    <small>ip-hidden@astra.vpn</small>
+                  </div>
+                  <span class="amount">210 мс</span>
+                </li>
+                <li>
+                  <span class="avatar small"></span>
+                  <div>
+                    <strong>Сервер: Канада</strong>
+                    <small>ip-hidden@astra.vpn</small>
+                  </div>
+                  <span class="amount">156 мс</span>
+                </li>
+                <li>
+                  <span class="avatar small"></span>
+                  <div>
+                    <strong>Сервер: Япония</strong>
+                    <small>ip-hidden@astra.vpn</small>
+                  </div>
+                  <span class="amount">180 мс</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p class="built-with-label">Работает на проверенных технологиях</p>
+    <ul class="tech-list">
+      <li>WireGuard 1.0</li>
+      <li>OpenVPN 2.6</li>
+      <li>AES-256</li>
+      <li>Kill Switch</li>
+      <li>No-Logs Core 3.4</li>
+    </ul>
+  </section>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section id="features" class="features container">
+    <h2 class="section-title">Защита сильнее, интернет быстрее.</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card large">
+        <h3>60+ стран, 3000+ серверов</h3>
+        <p>Все серверы, которые нужны для стабильного и быстрого соединения из любой точки мира.</p>
+        <div class="feature-visual globe"></div>
+      </div>
+
+      <div class="feature-card large">
+        <h3>Полный контроль в твоих руках</h3>
+        <p>Это не просто прокси — это набор инструментов, которые ты настраиваешь под себя: от выбора протокола до правил Kill Switch.</p>
+        <div class="feature-visual pulse"></div>
+      </div>
+
+      <div class="feature-card large">
+        <h3>Работает на всех твоих устройствах</h3>
+        <p>Приложения для современных платформ, без лишних зависимостей и конфликтов с системой.</p>
+        <div class="feature-visual devices"></div>
+      </div>
+
+      <div class="feature-card large">
+        <h3>Никаких логов, только приватность</h3>
+        <p>Все данные о подключении отделены от твоей личности. Настраивай приватность за секунды под любой сценарий использования.</p>
+        <div class="feature-visual chat">
+          <span class="chat-bubble">Нужно обновить сервер перед запуском</span>
+          <span class="chat-bubble accent">Сделаю</span>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title">Всё, что нужно. Ничего лишнего.</h2>
+
+    <div class="mini-feature-grid">
+      <div class="mini-feature">
+        <h4>Доступность прежде всего</h4>
+        <p>Полностью соответствует стандартам приватности, с лучшими практиками защиты.</p>
+      </div>
+      <div class="mini-feature">
+        <h4>Адаптивная защита</h4>
+        <p>Одинаково хорошо работает на любом устройстве и в любой сети.</p>
+      </div>
+      <div class="mini-feature">
+        <h4>Светлая и тёмная тема</h4>
+        <p>Бесшовное переключение между цветовыми схемами приложения.</p>
+      </div>
+      <div class="mini-feature">
+        <h4>Гибкая настройка</h4>
+        <p>Настраивай протоколы и правила под свой сценарий и устройство.</p>
+      </div>
+      <div class="mini-feature">
+        <h4>Максимальная скорость</h4>
+        <p>Создан для мгновенного подключения и стабильной скорости передачи.</p>
+      </div>
+      <div class="mini-feature">
+        <h4>Готов к продакшену</h4>
+        <p>Тщательно протестирован и готов к постоянному использованию.</p>
+      </div>
+      <div class="mini-feature">
+        <h4>Поддержка многих языков</h4>
+        <p>Легко подключить локализацию для разных регионов и языков.</p>
+      </div>
+      <div class="mini-feature">
+        <h4>Дружелюбен к разработчикам</h4>
+        <p>Работает с любым удобным для тебя клиентом или конфигурацией.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST / QUALITY ===================== -->
+  <section id="servers" class="trust container">
+    <h2 class="section-title">Качеству, которому можно доверять.</h2>
+    <p class="section-subtitle">
+      Все серверы работают на новейшей инфраструктуре, а код написан с учётом лучших практик безопасности.
+    </p>
+
+    <div class="planet-visual"></div>
+
+    <h2 class="section-title">Произведи правильное впечатление</h2>
+    <p class="section-subtitle">
+      Astra VPN помогает создать незабываемый опыт использования интернета, которому доверяют профессионалы.
+    </p>
+
+    <div class="preview-split">
+      <div class="preview-list">
+        <div class="preview-item">
+          <span class="check">✓</span>
+          <div>
+            <strong>Выбери свои серверы</strong>
+            <p>Выбирай из 60+ локаций для создания надёжного соединения под задачу.</p>
+          </div>
+        </div>
+        <div class="preview-item">
+          <span class="check">✓</span>
+          <div>
+            <strong>Добавь свои устройства</strong>
+            <p>Заполни аккаунт своими устройствами, лимитами и другим контентом.</p>
+          </div>
+        </div>
+        <div class="preview-item">
+          <span class="check">✓</span>
+          <div>
+            <strong>Настрой под себя</strong>
+            <p>Меняй протоколы, DNS и другие переменные в пару кликов.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-window small">
+        <div class="app-topbar">
+          <div class="app-user">
+            <span class="avatar"></span>
+            <span>Алиса Кочева</span>
+          </div>
+          <div class="app-tabs">
+            <span>Обзор</span>
+            <span>Устройства</span>
+            <span>Серверы</span>
+          </div>
+        </div>
+        <div class="app-body">
+          <div class="app-header-row">
+            <h2>Панель управления</h2>
+            <span>20 янв — 8 фев 2026</span>
+          </div>
+          <div class="stat-cards small">
+            <div class="stat-card">
+              <span class="stat-label">Скрыто данных</span>
+              <span class="stat-value">45 231,89 ГБ</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Подключений</span>
+              <span class="stat-value">+2350</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Серверов</span>
+              <span class="stat-value">12 234</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Устройств</span>
+              <span class="stat-value">+573</span>
+            </div>
+          </div>
+          <div class="chart-placeholder"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TESTIMONIALS ===================== -->
+  <section class="testimonials container">
+    <h2 class="section-title">Нам доверяют по всему миру</h2>
+    <p class="section-subtitle">Вот что говорят пользователи об Astra VPN.</p>
+
+    <div class="testimonial-grid">
+      <div class="testimonial-card">
+        <p>"Проверял скорость на мобильном — сеть держится стабильно, задержки почти не чувствую."</p>
+        <div class="testimonial-author">
+          <span class="avatar small"></span>
+          <div>
+            <strong>Фёдор Фёдоров</strong>
+            <small>@fedor304</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"Копаюсь в настройках Astra уже неделю. Kill Switch реально спасает при разрыве сети."</p>
+        <div class="testimonial-author">
+          <span class="avatar small"></span>
+          <div>
+            <strong>Феликс Бомонт</strong>
+            <small>@felixbo</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"Дизайн приложения затягивает не меньше, чем сама защита. Тёмная тема — отдельный кайф."</p>
+        <div class="testimonial-author">
+          <span class="avatar small"></span>
+          <div>
+            <strong>Ольга Викторова</strong>
+            <small>@olgavik</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"Клик — и всё готово. Мобильный интерфейс продуман до мелочей."</p>
+        <div class="testimonial-author">
+          <span class="avatar small"></span>
+          <div>
+            <strong>Елена Ростова</strong>
+            <small>@elenarostova</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"Исследую глобальную карту серверов Astra. Такая визуализация задержки — редкость."</p>
+        <div class="testimonial-author">
+          <span class="avatar small"></span>
+          <div>
+            <strong>Дарья Флинн</strong>
+            <small>@dflynn</small>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-card">
+        <p>"Настроил впервые свой домашний сервер через Astra. Гибкость — то, что нужно."</p>
+        <div class="testimonial-author">
+          <span class="avatar small"></span>
+          <div>
+            <strong>Кай Накамура</strong>
+            <small>@kainakawaves</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRICING ===================== -->
+  <section id="pricing" class="pricing container">
+    <h2 class="section-title">Собери свою защищённую сеть уже сегодня.</h2>
+    <p class="section-subtitle">
+      Получи полный доступ ко всем серверам. Без скрытых платежей — просто честная цена.
+    </p>
+
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Базовый</h3>
+        <p class="pricing-desc">Для тех, кто только начинает пользоваться VPN</p>
+        <div class="price">
+          <span class="price-value">0 ₽</span>
+          <span class="price-period">для всех</span>
+        </div>
+        <a href="#" class="btn btn-secondary btn-block">Начать бесплатно</a>
+        <p class="pricing-note">Бесплатно навсегда</p>
+        <ul class="pricing-features">
+          <li>1 подключённое устройство</li>
+          <li>5 доступных серверов</li>
+          <li>Базовое шифрование</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card featured">
+        <h3>Про</h3>
+        <p class="pricing-desc">Для активных пользователей и фрилансеров</p>
+        <div class="price">
+          <span class="price-value">990 ₽</span>
+          <span class="price-period">разовый платёж</span>
+        </div>
+        <a href="#" class="btn btn-primary btn-block">Получить полный доступ</a>
+        <p class="pricing-note">Бесплатно и с открытым кодом навсегда</p>
+        <ul class="pricing-features">
+          <li>5 подключённых устройств</li>
+          <li>60+ доступных серверов</li>
+          <li>Kill Switch и Split Tunneling</li>
+          <li>Приоритетная поддержка</li>
+        </ul>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Команда</h3>
+        <p class="pricing-desc">Для команд и агентств, работающих вместе</p>
+        <div class="price">
+          <span class="price-value">0 ₽</span>
+          <span class="price-period">разовый платёж плюс налоги</span>
+        </div>
+        <a href="#" class="btn btn-secondary btn-block">Доступ для команды</a>
+        <p class="pricing-note">Бесплатно навсегда</p>
+        <ul class="pricing-features">
+          <li>Все серверы для всей команды</li>
+          <li>Общий доступ и управление</li>
+          <li>Расширенная аналитика трафика</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section id="faq" class="faq container">
+    <h2 class="section-title">Вопросы и ответы</h2>
+
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Легко ли настроить Astra VPN?</summary>
+        <p>Да, приложение подключается в один клик, а расширенные настройки доступны в отдельном разделе.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Хранит ли Astra VPN логи подключений?</summary>
+        <p>Нет, сервис работает по политике No-Logs — данные о сессиях не сохраняются.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Чем Astra VPN отличается от бесплатных прокси?</summary>
+        <p>Astra VPN использует полноценное шифрование трафика и не продаёт данные пользователей рекламодателям.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Почему не настроить VPN-сервер самостоятельно?</summary>
+        <p>Самостоятельная настройка требует времени, обслуживания серверов и обновлений безопасности — Astra берёт это на себя.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Можно ли вернуть деньги, если не понравится?</summary>
+        <p>Да, действует стандартный период возврата средств после оплаты тарифа.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Какие функции появятся в будущем?</summary>
+        <p>В планах — расширение списка серверов, новые протоколы и улучшенная мобильная версия.</p>
+      </details>
+    </div>
+
+    <div class="cta-block">
+      <h2>Начни защищать свои данные</h2>
+      <div class="hero-actions">
+        <a href="#" class="btn btn-primary btn-lg">Начать</a>
+        <a href="#" class="btn btn-secondary btn-lg">Github</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-top container">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-icon">🛡️</span>
+          <span class="logo-text">Astra VPN</span>
+        </a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Продукт</h4>
+        <a href="#">Обновления</a>
+        <a href="#">Компоненты приложения</a>
+        <a href="#">Документация</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Компания</h4>
+        <a href="#">О нас</a>
+        <a href="#">Вакансии</a>
+        <a href="#">Блог</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Контакты</h4>
+        <a href="#">Github</a>
+        <a href="#">Discord</a>
+        <a href="#">Twitter</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom container">
+      <span>© 2026 Astra VPN. Все права защищены.</span>
+      <div class="footer-legal">
+        <a href="#">Политика конфиденциальности</a>
+        <a href="#">Условия использования</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
