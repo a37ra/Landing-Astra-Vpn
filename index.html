@@ -91,6 +91,7 @@
     fill="#FAFAFA"/>
 </svg>Github</a>
     </div>
+  </div>
 
     <!-- Скриншот приложения / дашборд -->
     <div class="app-preview">
@@ -303,47 +304,96 @@
 
     <p class="built-with-label">Работает на проверенных технологиях</p>
     <ul class="tech-list">
-      <li>WireGuard 1.0</li>
-      <li>OpenVPN 2.6</li>
-      <li>AES-256</li>
-      <li>Kill Switch</li>
-      <li>No-Logs Core 3.4</li>
+
+      <li class="listtech"> <!--Wire Guard-->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="28" height="28">
+  <path fill="#ffffff" d="M34 30 L54 50 L34 70 L34 58 L42 50 L34 42 Z"/>
+  <path fill="#ffffff" d="M52 30 L72 50 L52 70 L52 58 L60 50 L52 42 Z"/>
+</svg>WireGuard 1.0</li>
+
+      <li class="listtech"> <!--Open Vpn-->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22">
+  <path fill="#ffffff" d="M12 .357C5.385.357 0 5.69 0 12.254c0 4.36 2.358 8.153 5.896 10.204l.77-5.076a7.046 7.046 0 01-1.846-4.719c0-3.897 3.18-7.076 7.13-7.076 3.948 0 7.126 3.18 7.126 7.076 0 1.847-.717 3.488-1.846 4.77L18 22.51c3.59-2.05 6-5.899 6-10.258C24 5.69 18.615.357 12 .357zm-.05 8.157a3.786 3.786 0 00-3.796 3.795 3.738 3.738 0 002.461 3.54L9.13 23.643h5.64l-1.435-7.795c1.385-.564 2.41-1.898 2.41-3.54a3.786 3.786 0 00-3.795-3.794z"/>
+</svg>OpenVPN 2.6</li>
+
+      <li class="listtech"> <!--Aes-256-->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="28" height="28">
+  <path fill="#ffffff" fill-rule="evenodd" d="M38 44 v-8 a12 12 0 1 1 24 0 v8 h4 v34 h-32 v-34 Z M44 44 h12 v-8 a6 6 0 1 0 -12 0 Z"/>
+</svg>AES-256</li>
+
+      <li class="listtech"> <!--Kill Switch-->
+       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="28" height="28">
+  <path fill="#ffffff" fill-rule="evenodd" d="M50 26 h8 v22 h-8 Z M34 34 a24 24 0 1 0 32 0 l-6 6 a16 16 0 1 1 -20 0 Z"/>
+</svg>Kill Switch</li>
+
+      <li class="listtech"> <!--No Logs Core-->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="28" height="28"><path fill="#ffffff" fill-rule="evenodd" d="M50 34 c-13 0 -22 9 -26 16 c4 7 13 16 26 16 c13 0 22 -9 26 -16 c-4 -7 -13 -16 -26 -16 Z M50 41 a9 9 0 1 1 0 18 a9 9 0 1 1 0 -18Z"/>
+  <rect x="24" y="46" width="52" height="8" fill="#ffffff" transform="rotate(-35 50 50)"/>
+</svg>No-Logs Core 3.4</li>
+
     </ul>
   </section>
 
-  <!-- ===================== FEATURES ===================== -->
-  <section id="features" class="features container">
-    <h2 class="section-title">Защита сильнее, интернет быстрее.</h2>
+ <!-- ===================== FEATURES ===================== -->
+<section id="features" class="features_container">
+  <h2 class="section-title">Защита сильнее, интернет быстрее.</h2>
 
-    <div class="feature-grid">
-      <div class="feature-card large">
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-visual">
+        <picture>
+          <source srcset="assets/card1.webp" type="image/webp">
+          <img src="assets/card1.png" alt="" loading="lazy">
+        </picture>
+      </div>
+      <div class="feature-content">
         <h3>60+ стран, 3000+ серверов</h3>
         <p>Все серверы, которые нужны для стабильного и быстрого соединения из любой точки мира.</p>
-        <div class="feature-visual globe"></div>
-      </div>
-
-      <div class="feature-card large">
-        <h3>Полный контроль в твоих руках</h3>
-        <p>Это не просто прокси — это набор инструментов, которые ты настраиваешь под себя: от выбора протокола до правил Kill Switch.</p>
-        <div class="feature-visual pulse"></div>
-      </div>
-
-      <div class="feature-card large">
-        <h3>Работает на всех твоих устройствах</h3>
-        <p>Приложения для современных платформ, без лишних зависимостей и конфликтов с системой.</p>
-        <div class="feature-visual devices"></div>
-      </div>
-
-      <div class="feature-card large">
-        <h3>Никаких логов, только приватность</h3>
-        <p>Все данные о подключении отделены от твоей личности. Настраивай приватность за секунды под любой сценарий использования.</p>
-        <div class="feature-visual chat">
-          <span class="chat-bubble">Нужно обновить сервер перед запуском</span>
-          <span class="chat-bubble accent">Сделаю</span>
-        </div>
       </div>
     </div>
 
+    <div class="feature-card">
+      <div class="feature-visual">
+        <picture>
+          <source srcset="assets/card2.webp" type="image/webp">
+          <img src="assets/card2.png" alt="" loading="lazy">
+        </picture>
+      </div>
+      <div class="feature-content">
+        <h3>Полный контроль в твоих руках</h3>
+        <p>Это не просто прокси — это набор инструментов, которые ты настраиваешь под себя: от выбора протокола до правил Kill Switch.</p>
+      </div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-visual">
+        <picture>
+          <source srcset="assets/card3.webp" type="image/webp">
+          <img src="assets/card3.png" alt="" loading="lazy">
+        </picture>
+      </div>
+      <div class="feature-content">
+        <h3>Работает на всех твоих устройствах</h3>
+        <p>Приложения для современных платформ, без лишних зависимостей и конфликтов с системой.</p>
+      </div>
+    </div>
+
+    <div class="feature-card">
+      <div class="feature-visual">
+        <picture>
+          <source srcset="assets/card4.webp" type="image/webp">
+          <img src="assets/card4.png" alt="" loading="lazy">
+        </picture>
+      </div>
+      <div class="feature-content">
+        <h3>Никаких логов, только приватность</h3>
+        <p>Все данные о подключении отделены от твоей личности. Настраивай приватность за секунды под любой сценарий использования.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <section class="features_container-second"
     <h2 class="section-title">Всё, что нужно. Ничего лишнего.</h2>
 
     <div class="mini-feature-grid">
