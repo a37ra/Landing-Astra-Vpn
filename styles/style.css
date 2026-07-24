@@ -12,7 +12,7 @@ html {
   /* Фон */
   --color-bg: #0a0908;            /* основной фон страницы  */
   --color-bg-alt: #12100e;        /* фон карточек второго уровня */
-  --color-surface: #1a1613;       /* фон дашборда, окон приложения */
+  --color-surface: #0f0f0f;       /* фон дашборда, окон приложения */
   --color-surface-hover: #221c18;
 
   /* Акцент (тёплое свечение) */
@@ -28,7 +28,7 @@ html {
   --color-text-dim: #6b655f;      /* совсем тихий текст, плейсхолдеры */
 
   /* Границы и разделители */
-  --color-border: #2a2521;
+  --color-border: #232322;
   --color-border-light: #383129;
 
   /* Статусы */
@@ -302,6 +302,7 @@ body {
     -webkit-background-clip: text; /* обязательно для Safari/старых Chrome */
     color: transparent;
     -webkit-text-fill-color: transparent; /* тоже для совместимости с Safari */
+    padding-top: 40px;
 }
 
 .badge-wrapper {
@@ -382,3 +383,315 @@ body {
     0 2px 8px rgba(251, 239, 239, 0.306),
     0 0 0 1px rgba(168, 157, 157, 0.159);
 }
+
+.app-preview {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-top: 6vw;
+}
+
+.app-window {
+  position: relative;
+  box-sizing: border-box;
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.app-window::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 1px solid var(--color-border);
+  pointer-events: none;
+
+  -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+}
+
+/* ===== Верхняя панель окна ===== */
+.app-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.app-user {
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: var(--color-bg);
+  padding: 6px 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.511);
+  font-family: var(--font-body);
+  font-weight: 560;
+  font-size: 15px;
+  color: var(--color-text);
+  gap: 20px;
+}
+
+.app-tabs {
+  display: flex;
+  gap: 28px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.app-search input {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 8px 14px;
+  color: var(--color-text);
+  font-size: 14px;
+  width: 220px;
+  outline: none;
+}
+
+.app-search input::placeholder {
+  color: var(--color-text-dim);
+}
+
+/* ===== Тело окна ===== */
+.app-body {
+  padding: 32px 24px;
+}
+
+.app-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.app-header-row h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.app-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
+
+.btn-small {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.app-tabs-secondary {
+  display: flex;
+  gap: 4px;
+  background-color: var(--color-bg);
+  width: fit-content;
+  padding: 4px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+}
+
+.app-tabs-secondary span {
+  padding: 6px 16px;
+  font-size: 14px;
+  color: var(--color-text-muted);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.app-tabs-secondary span.active {
+  background-color: var(--color-surface-hover);
+  color: var(--color-text);
+}
+
+.stat-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 18px 20px;
+}
+
+.stat-label {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.stat-delta {
+  font-size: 12px;
+  color: var(--color-success);
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 16px;
+}
+
+.chart-card,
+.activity-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.chart-card h3,
+.activity-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0 0 4px;
+}
+
+.muted {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin: 0 0 16px;
+}
+
+.chart-placeholder {
+  height: 220px;
+  background: linear-gradient(
+    to top,
+    var(--color-accent-muted) 0%,
+    transparent 100%
+  );
+  border-radius: 8px;
+}
+
+.activity-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.activity-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.activity-list li div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.activity-list strong {
+  font-size: 14px;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.activity-list small {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.amount {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+}
+
+/* ===== Аватары ===== */
+.avatar {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-surface-hover);
+  flex-shrink: 0;
+}
+
+.avatar.small {
+  width: 32px;
+  height: 32px;
+  color: #a32c2c;
+}
+
+.calendar {
+  display: flex;
+  align-items: center;
+}
+
+.chart-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  height: 220px;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.bar {
+  flex: 1;
+  height: var(--h);
+  min-height: 4px;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(
+    to top,
+    #c60d0d03 0%,
+    var(--color-text-muted) 100%
+  );
+  transition: opacity 0.3s ease;
+}
+
+.bar:hover {
+  opacity: 0.8;
+}
+
+
+.app-window {
+  position: relative;
+  overflow: hidden;
+}
+
+.app-window::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    var(--color-bg) 90%
+  );
+  pointer-events: none;
+  z-index: 5;
+}
+

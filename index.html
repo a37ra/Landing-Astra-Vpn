@@ -97,8 +97,23 @@
       <div class="app-window">
         <div class="app-topbar">
           <div class="app-user">
-            <span class="avatar"></span>
-            <span>Алиса Кочева</span>
+            <span class="avatar"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="avatarClip">
+      <circle cx="18" cy="18" r="18"/>
+    </clipPath>
+  </defs>
+  <circle cx="18" cy="18" r="18" fill="#f87171"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="18" cy="15" r="6.5" fill="#FFF"/>
+    <circle cx="18" cy="34" r="11" fill="#FFF"/>
+  </g>
+</svg></span>
+            <span>Алиса Кочева </span>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 6.5L8 3L12 6.5" stroke="#9A9AA0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M4 9.5L8 13L12 9.5" stroke="#9A9AA0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
           </div>
           <div class="app-tabs">
             <span>Обзор</span>
@@ -115,7 +130,18 @@
           <div class="app-header-row">
             <h2>Панель управления</h2>
             <div class="app-header-actions">
-              <span>20 янв — 8 фев 2026</span>
+              <span class="calendar"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <rect x="3" y="4" width="18" height="17" rx="3" fill="#3A3A3E"/>
+  <rect x="3" y="4" width="18" height="5" rx="3" fill="#4A4A50"/>
+  <rect x="7" y="2" width="2" height="4" rx="1" fill="#9A9AA0"/>
+  <rect x="15" y="2" width="2" height="4" rx="1" fill="#9A9AA0"/>
+  <circle cx="7.5" cy="13" r="1.2" fill="#9A9AA0"/>
+  <circle cx="12" cy="13" r="1.2" fill="#9A9AA0"/>
+  <circle cx="16.5" cy="13" r="1.2" fill="#9A9AA0"/>
+  <circle cx="7.5" cy="17" r="1.2" fill="#9A9AA0"/>
+  <circle cx="12" cy="17" r="1.2" fill="#9A9AA0"/>
+
+</svg>20 янв — 8 фев 2026</span>
               <button class="btn btn-small">Скачать журнал</button>
             </div>
           </div>
@@ -151,17 +177,41 @@
           </div>
 
           <div class="app-grid">
-            <div class="chart-card">
-              <h3>Активность подключений</h3>
-              <div class="chart-placeholder"></div>
-            </div>
+<div class="chart-card">
+  <h3>Активность подключений</h3>
+  <div class="chart-bars">
+    <div class="bar" style="--h: 55%"></div>
+    <div class="bar" style="--h: 40%"></div>
+    <div class="bar" style="--h: 60%"></div>
+    <div class="bar" style="--h: 35%"></div>
+    <div class="bar" style="--h: 48%"></div>
+    <div class="bar" style="--h: 85%"></div>
+    <div class="bar" style="--h: 95%"></div>
+    <div class="bar" style="--h: 50%"></div>
+    <div class="bar" style="--h: 22%"></div>
+    <div class="bar" style="--h: 65%"></div>
+    <div class="bar" style="--h: 18%"></div>
+    <div class="bar" style="--h: 45%"></div>
+  </div>
+</div>
 
             <div class="activity-card">
               <h3>Последние подключения</h3>
               <p class="muted">Всего 265 сессий в этом месяце</p>
               <ul class="activity-list">
                 <li>
-                  <span class="avatar small"></span>
+                  <span class="avatar small"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="avatarClip">
+      <circle cx="18" cy="18" r="18"/>
+    </clipPath>
+  </defs>
+  <circle cx="18" cy="18" r="18" fill="#3A3A3E"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="18" cy="15" r="6.5" fill="#9A9AA0"/>
+    <circle cx="18" cy="34" r="11" fill="#9A9AA0"/>
+  </g>
+</svg></span>
                   <div>
                     <strong>Сервер: Нидерланды</strong>
                     <small>ip-hidden@astra.vpn</small>
@@ -169,7 +219,18 @@
                   <span class="amount">128 мс</span>
                 </li>
                 <li>
-                  <span class="avatar small"></span>
+                  <span class="avatar small"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="avatarClip">
+      <circle cx="18" cy="18" r="18"/>
+    </clipPath>
+  </defs>
+  <circle cx="18" cy="18" r="18" fill="#3A3A3E"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="18" cy="15" r="6.5" fill="#9A9AA0"/>
+    <circle cx="18" cy="34" r="11" fill="#9A9AA0"/>
+  </g>
+</svg></span>
                   <div>
                     <strong>Сервер: Германия</strong>
                     <small>ip-hidden@astra.vpn</small>
@@ -177,7 +238,18 @@
                   <span class="amount">94 мс</span>
                 </li>
                 <li>
-                  <span class="avatar small"></span>
+                  <span class="avatar small"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="avatarClip">
+      <circle cx="18" cy="18" r="18"/>
+    </clipPath>
+  </defs>
+  <circle cx="18" cy="18" r="18" fill="#3A3A3E"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="18" cy="15" r="6.5" fill="#9A9AA0"/>
+    <circle cx="18" cy="34" r="11" fill="#9A9AA0"/>
+  </g>
+</svg></span>
                   <div>
                     <strong>Сервер: Сингапур</strong>
                     <small>ip-hidden@astra.vpn</small>
@@ -185,7 +257,18 @@
                   <span class="amount">210 мс</span>
                 </li>
                 <li>
-                  <span class="avatar small"></span>
+                  <span class="avatar small"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="avatarClip">
+      <circle cx="18" cy="18" r="18"/>
+    </clipPath>
+  </defs>
+  <circle cx="18" cy="18" r="18" fill="#3A3A3E"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="18" cy="15" r="6.5" fill="#9A9AA0"/>
+    <circle cx="18" cy="34" r="11" fill="#9A9AA0"/>
+  </g>
+</svg></span>
                   <div>
                     <strong>Сервер: Канада</strong>
                     <small>ip-hidden@astra.vpn</small>
@@ -193,7 +276,18 @@
                   <span class="amount">156 мс</span>
                 </li>
                 <li>
-                  <span class="avatar small"></span>
+                  <span class="avatar small"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="avatarClip">
+      <circle cx="18" cy="18" r="18"/>
+    </clipPath>
+  </defs>
+  <circle cx="18" cy="18" r="18" fill="#3A3A3E"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="18" cy="15" r="6.5" fill="#9A9AA0"/>
+    <circle cx="18" cy="34" r="11" fill="#9A9AA0"/>
+  </g>
+</svg></span>
                   <div>
                     <strong>Сервер: Япония</strong>
                     <small>ip-hidden@astra.vpn</small>
