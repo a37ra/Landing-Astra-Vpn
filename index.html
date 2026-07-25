@@ -476,28 +476,37 @@
 
 <section class="impression-container">
     <h2 class="impression-title">Произведи правильное впечатление</h2>
-    <p class="section-subtitle">
+    <p class="impression-subtitle">
       Astra VPN помогает создать незабываемый опыт использования интернета, которому доверяют профессионалы.
     </p>
 
     <div class="preview-split">
       <div class="preview-list">
         <div class="preview-item">
-          <span class="check">✓</span>
+          <span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#FF7A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+</span>
           <div>
             <strong>Выбери свои серверы</strong>
             <p>Выбирай из 60+ локаций для создания надёжного соединения под задачу.</p>
           </div>
         </div>
         <div class="preview-item">
-          <span class="check">✓</span>
+          <span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#FF7A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+</span>
           <div>
             <strong>Добавь свои устройства</strong>
             <p>Заполни аккаунт своими устройствами, лимитами и другим контентом.</p>
           </div>
         </div>
         <div class="preview-item">
-          <span class="check">✓</span>
+          <span class="check"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="#FF7A00" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+  <polyline points="20 6 9 17 4 12"></polyline>
+</svg>
+</span>
           <div>
             <strong>Настрой под себя</strong>
             <p>Меняй протоколы, DNS и другие переменные в пару кликов.</p>
@@ -505,115 +514,525 @@
         </div>
       </div>
 
-      <div class="app-window small">
+          <div class="app-preview">
+      <div class="app-window">
         <div class="app-topbar">
           <div class="app-user">
-            <span class="avatar"></span>
-            <span>Алиса Кочева</span>
+            <span class="avatar"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="avatarClip">
+      <circle cx="18" cy="18" r="18"/>
+    </clipPath>
+  </defs>
+  <circle cx="18" cy="18" r="18" fill="#f87171"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="18" cy="15" r="6.5" fill="#FFF"/>
+    <circle cx="18" cy="34" r="11" fill="#FFF"/>
+  </g>
+</svg></span>
+            <span>Алиса Кочева </span>
+            <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 6.5L8 3L12 6.5" stroke="#9A9AA0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <path d="M4 9.5L8 13L12 9.5" stroke="#9A9AA0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
           </div>
           <div class="app-tabs">
             <span>Обзор</span>
             <span>Устройства</span>
             <span>Серверы</span>
+            <span>Настройки</span>
+          </div>
+          <div class="app-search">
+            <input type="text" placeholder="Поиск сервера...">
           </div>
         </div>
+
         <div class="app-body">
           <div class="app-header-row">
             <h2>Панель управления</h2>
-            <span>20 янв — 8 фев 2026</span>
+            <div class="app-header-actions">
+              <span class="calendar"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+  <rect x="3" y="4" width="18" height="17" rx="3" fill="#3A3A3E"/>
+  <rect x="3" y="4" width="18" height="5" rx="3" fill="#4A4A50"/>
+  <rect x="7" y="2" width="2" height="4" rx="1" fill="#9A9AA0"/>
+  <rect x="15" y="2" width="2" height="4" rx="1" fill="#9A9AA0"/>
+  <circle cx="7.5" cy="13" r="1.2" fill="#9A9AA0"/>
+  <circle cx="12" cy="13" r="1.2" fill="#9A9AA0"/>
+  <circle cx="16.5" cy="13" r="1.2" fill="#9A9AA0"/>
+  <circle cx="7.5" cy="17" r="1.2" fill="#9A9AA0"/>
+  <circle cx="12" cy="17" r="1.2" fill="#9A9AA0"/>
+
+</svg>20 янв — 8 фев 2026</span>
+              <button class="btn btn-small">Скачать журнал</button>
+            </div>
           </div>
-          <div class="stat-cards small">
+
+          <div class="app-tabs-secondary">
+            <span class="active">Обзор</span>
+            <span>Трафик</span>
+            <span>Отчёты</span>
+            <span>Уведомления</span>
+          </div>
+
+          <div class="stat-cards">
             <div class="stat-card">
               <span class="stat-label">Скрыто данных</span>
               <span class="stat-value">45 231,89 ГБ</span>
+              <span class="stat-delta">+18% за месяц</span>
             </div>
             <div class="stat-card">
-              <span class="stat-label">Подключений</span>
+              <span class="stat-label">Активных подключений</span>
               <span class="stat-value">+2350</span>
+              <span class="stat-delta">+12% за месяц</span>
             </div>
             <div class="stat-card">
-              <span class="stat-label">Серверов</span>
+              <span class="stat-label">Серверов онлайн</span>
               <span class="stat-value">12 234</span>
+              <span class="stat-delta">+9% за месяц</span>
             </div>
             <div class="stat-card">
-              <span class="stat-label">Устройств</span>
+              <span class="stat-label">Устройств в сети</span>
               <span class="stat-value">+573</span>
+              <span class="stat-delta">+201 за месяц</span>
             </div>
           </div>
-          <div class="chart-placeholder"></div>
+
+          <div class="app-grid">
+<div class="chart-card">
+  <h3>Активность подключений</h3>
+  <div class="chart-bars">
+    <div class="bar" style="--h: 55%"></div>
+    <div class="bar" style="--h: 40%"></div>
+    <div class="bar" style="--h: 60%"></div>
+    <div class="bar" style="--h: 35%"></div>
+    <div class="bar" style="--h: 48%"></div>
+    <div class="bar" style="--h: 85%"></div>
+    <div class="bar" style="--h: 95%"></div>
+    <div class="bar" style="--h: 50%"></div>
+    <div class="bar" style="--h: 22%"></div>
+    <div class="bar" style="--h: 65%"></div>
+    <div class="bar" style="--h: 18%"></div>
+    <div class="bar" style="--h: 45%"></div>
+  </div>
+</div>
+
+            <div class="activity-card">
+              <h3>Последние подключения</h3>
+              <p class="muted">Всего 265 сессий в этом месяце</p>
+              <ul class="activity-list">
+                <li>
+                  <span class="avatar small"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="avatarClip">
+      <circle cx="18" cy="18" r="18"/>
+    </clipPath>
+  </defs>
+  <circle cx="18" cy="18" r="18" fill="#3A3A3E"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="18" cy="15" r="6.5" fill="#9A9AA0"/>
+    <circle cx="18" cy="34" r="11" fill="#9A9AA0"/>
+  </g>
+</svg></span>
+                  <div>
+                    <strong>Сервер: Нидерланды</strong>
+                    <small>ip-hidden@astra.vpn</small>
+                  </div>
+                  <span class="amount">128 мс</span>
+                </li>
+                <li>
+                  <span class="avatar small"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="avatarClip">
+      <circle cx="18" cy="18" r="18"/>
+    </clipPath>
+  </defs>
+  <circle cx="18" cy="18" r="18" fill="#3A3A3E"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="18" cy="15" r="6.5" fill="#9A9AA0"/>
+    <circle cx="18" cy="34" r="11" fill="#9A9AA0"/>
+  </g>
+</svg></span>
+                  <div>
+                    <strong>Сервер: Германия</strong>
+                    <small>ip-hidden@astra.vpn</small>
+                  </div>
+                  <span class="amount">94 мс</span>
+                </li>
+                <li>
+                  <span class="avatar small"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="avatarClip">
+      <circle cx="18" cy="18" r="18"/>
+    </clipPath>
+  </defs>
+  <circle cx="18" cy="18" r="18" fill="#3A3A3E"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="18" cy="15" r="6.5" fill="#9A9AA0"/>
+    <circle cx="18" cy="34" r="11" fill="#9A9AA0"/>
+  </g>
+</svg></span>
+                  <div>
+                    <strong>Сервер: Сингапур</strong>
+                    <small>ip-hidden@astra.vpn</small>
+                  </div>
+                  <span class="amount">210 мс</span>
+                </li>
+                <li>
+                  <span class="avatar small"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="avatarClip">
+      <circle cx="18" cy="18" r="18"/>
+    </clipPath>
+  </defs>
+  <circle cx="18" cy="18" r="18" fill="#3A3A3E"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="18" cy="15" r="6.5" fill="#9A9AA0"/>
+    <circle cx="18" cy="34" r="11" fill="#9A9AA0"/>
+  </g>
+</svg></span>
+                  <div>
+                    <strong>Сервер: Канада</strong>
+                    <small>ip-hidden@astra.vpn</small>
+                  </div>
+                  <span class="amount">156 мс</span>
+                </li>
+                <li>
+                  <span class="avatar small"><svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="avatarClip">
+      <circle cx="18" cy="18" r="18"/>
+    </clipPath>
+  </defs>
+  <circle cx="18" cy="18" r="18" fill="#3A3A3E"/>
+  <g clip-path="url(#avatarClip)">
+    <circle cx="18" cy="15" r="6.5" fill="#9A9AA0"/>
+    <circle cx="18" cy="34" r="11" fill="#9A9AA0"/>
+  </g>
+</svg></span>
+                  <div>
+                    <strong>Сервер: Япония</strong>
+                    <small>ip-hidden@astra.vpn</small>
+                  </div>
+                  <span class="amount">180 мс</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
   <!-- ===================== TESTIMONIALS ===================== -->
   <section class="testimonials container">
-    <h2 class="section-title">Нам доверяют по всему миру</h2>
-    <p class="section-subtitle">Вот что говорят пользователи об Astra VPN.</p>
+  <h2 class="section-title">Нам доверяют по всему миру</h2>
+  <p class="section-subtitle">Вот что говорят пользователи об Astra VPN.</p>
 
-    <div class="testimonial-grid">
-      <div class="testimonial-card">
-        <p>"Проверял скорость на мобильном — сеть держится стабильно, задержки почти не чувствую."</p>
-        <div class="testimonial-author">
-          <span class="avatar small"></span>
-          <div>
-            <strong>Фёдор Фёдоров</strong>
-            <small>@fedor304</small>
+  <div class="marquee-wrap">
+
+    <div class="marquee-row">
+      <div class="marquee-track marquee-track--left">
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Фёдор Фёдоров</strong>
+              <small>@fedor304</small>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <p>"Копаюсь в настройках Astra уже неделю. Kill Switch реально спасает при разрыве сети."</p>
-        <div class="testimonial-author">
-          <span class="avatar small"></span>
-          <div>
-            <strong>Феликс Бомонт</strong>
-            <small>@felixbo</small>
+          <p>"Проверял скорость на мобильном — сеть держится стабильно, задержки почти не чувствую."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Феликс Бомонт</strong>
+              <small>@felixbo</small>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <p>"Дизайн приложения затягивает не меньше, чем сама защита. Тёмная тема — отдельный кайф."</p>
-        <div class="testimonial-author">
-          <span class="avatar small"></span>
-          <div>
-            <strong>Ольга Викторова</strong>
-            <small>@olgavik</small>
+          <p>"Копаюсь в настройках Astra уже неделю. Kill Switch реально спасает при разрыве сети."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Ольга Викторова</strong>
+              <small>@olgavik</small>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <p>"Клик — и всё готово. Мобильный интерфейс продуман до мелочей."</p>
-        <div class="testimonial-author">
-          <span class="avatar small"></span>
-          <div>
-            <strong>Елена Ростова</strong>
-            <small>@elenarostova</small>
+          <p>"Дизайн приложения затягивает не меньше, чем сама защита. Тёмная тема — отдельный кайф."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Марк Свенсон</strong>
+              <small>@marksw</small>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <p>"Исследую глобальную карту серверов Astra. Такая визуализация задержки — редкость."</p>
-        <div class="testimonial-author">
-          <span class="avatar small"></span>
-          <div>
-            <strong>Дарья Флинн</strong>
-            <small>@dflynn</small>
+          <p>"Переключаюсь между серверами за секунду, ни одного разрыва соединения за месяц."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Ирина Соколова</strong>
+              <small>@isokolova</small>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <p>"Настроил впервые свой домашний сервер через Astra. Гибкость — то, что нужно."</p>
-        <div class="testimonial-author">
-          <span class="avatar small"></span>
-          <div>
-            <strong>Кай Накамура</strong>
-            <small>@kainakawaves</small>
+          <p>"Наконец нашла VPN, который не тормозит стриминг. Качество картинки не проседает вообще."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Томас Веллер</strong>
+              <small>@twveller</small>
+            </div>
           </div>
-        </div>
+          <p>"Приятно удивлён скоростью подключения на удалённых серверах. Раньше такого не встречал."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Фёдор Фёдоров</strong>
+              <small>@fedor304</small>
+            </div>
+          </div>
+          <p>"Проверял скорость на мобильном — сеть держится стабильно, задержки почти не чувствую."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Феликс Бомонт</strong>
+              <small>@felixbo</small>
+            </div>
+          </div>
+          <p>"Копаюсь в настройках Astra уже неделю. Kill Switch реально спасает при разрыве сети."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Ольга Викторова</strong>
+              <small>@olgavik</small>
+            </div>
+          </div>
+          <p>"Дизайн приложения затягивает не меньше, чем сама защита. Тёмная тема — отдельный кайф."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Марк Свенсон</strong>
+              <small>@marksw</small>
+            </div>
+          </div>
+          <p>"Переключаюсь между серверами за секунду, ни одного разрыва соединения за месяц."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Ирина Соколова</strong>
+              <small>@isokolova</small>
+            </div>
+          </div>
+          <p>"Наконец нашла VPN, который не тормозит стриминг. Качество картинки не проседает вообще."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Томас Веллер</strong>
+              <small>@twveller</small>
+            </div>
+          </div>
+          <p>"Приятно удивлён скоростью подключения на удалённых серверах. Раньше такого не встречал."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
       </div>
     </div>
-  </section>
+
+    <div class="marquee-row">
+      <div class="marquee-track marquee-track--right">
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Елена Ростова</strong>
+              <small>@elenarostova</small>
+            </div>
+          </div>
+          <p>"Клик — и всё готово. Мобильный интерфейс продуман до мелочей."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Дарья Флинн</strong>
+              <small>@dflynn</small>
+            </div>
+          </div>
+          <p>"Исследую глобальную карту серверов Astra. Такая визуализация задержки — редкость."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Кай Накамура</strong>
+              <small>@kainakawaves</small>
+            </div>
+          </div>
+          <p>"Настроил впервые свой домашний сервер через Astra. Гибкость — то, что нужно."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Полина Гроссман</strong>
+              <small>@polinagr</small>
+            </div>
+          </div>
+          <p>"Настройка заняла меньше минуты. Для человека, далёкого от IT, это огромный плюс."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Артём Ким</strong>
+              <small>@artemkim</small>
+            </div>
+          </div>
+          <p>"Пользуюсь на трёх устройствах одновременно — никаких лимитов, всё синхронизировано."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Симона Дрейк</strong>
+              <small>@simonadrake</small>
+            </div>
+          </div>
+          <p>"Наконец приложение, где всё интуитивно понятно с первого запуска. Отличная работа."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Елена Ростова</strong>
+              <small>@elenarostova</small>
+            </div>
+          </div>
+          <p>"Клик — и всё готово. Мобильный интерфейс продуман до мелочей."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Дарья Флинн</strong>
+              <small>@dflynn</small>
+            </div>
+          </div>
+          <p>"Исследую глобальную карту серверов Astra. Такая визуализация задержки — редкость."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Кай Накамура</strong>
+              <small>@kainakawaves</small>
+            </div>
+          </div>
+          <p>"Настроил впервые свой домашний сервер через Astra. Гибкость — то, что нужно."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Полина Гроссман</strong>
+              <small>@polinagr</small>
+            </div>
+          </div>
+          <p>"Настройка заняла меньше минуты. Для человека, далёкого от IT, это огромный плюс."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Артём Ким</strong>
+              <small>@artemkim</small>
+            </div>
+          </div>
+          <p>"Пользуюсь на трёх устройствах одновременно — никаких лимитов, всё синхронизировано."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+        <a href="#" class="testimonial-card">
+          <div class="testimonial-author">
+            <span class="avatar small"></span>
+            <div>
+              <strong>Симона Дрейк</strong>
+              <small>@simonadrake</small>
+            </div>
+          </div>
+          <p>"Наконец приложение, где всё интуитивно понятно с первого запуска. Отличная работа."</p>
+          <span class="testimonial-link">Смотреть оригинал →</span>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- ===================== PRICING ===================== -->
   <section id="pricing" class="pricing container">
