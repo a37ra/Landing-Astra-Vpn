@@ -147,12 +147,58 @@ body {
   font-weight: 600;
   white-space: nowrap;
   box-sizing: border-box;
+  border-radius: 5px;
   transition: background-color 0.3s ease, transform 0.3s ease;
   padding: 0.4rem 1rem;
 }
 
 .btn-ghost:hover {
   transform: translateY(-2px);
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.btn-ghost:active,
+.btn-primary:active,
+.btn-secondary:active {
+  transform: translateY(0) scale(0.97);
+}
+
+.btn-primary,
+.btn-secondary {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-primary::before,
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(
+    115deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.btn-primary:hover::before,
+.btn-secondary:hover::before {
+  left: 130%;
+}
+
+.btn-primary > *,
+.btn-secondary > * {
+  position: relative;
+  z-index: 2;
 }
 
 .btn-primary {
@@ -178,7 +224,7 @@ body {
   background-color: #fffefe;
   transform: translateY(-2px);
   box-shadow:
-    0 2px 8px rgba(237, 234, 234, 0.596),
+    0 4px 20px rgba(237, 234, 234, 0.55),
     0 0 0 1px rgb(0, 0, 0);
 }
 
@@ -288,6 +334,35 @@ body {
     margin: 0 auto;
 }
 
+@keyframes hero-rise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .badge-wrapper {
+    animation: hero-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+  .hero-title {
+    animation: hero-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+  }
+  .hero-subtitle {
+    animation: hero-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.22s both;
+  }
+  .hero-actions {
+    animation: hero-rise 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.34s both;
+  }
+  .app-preview {
+    animation: hero-rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) 0.46s both;
+  }
+}
+
 .hero-title {
     display: flex;
     justify-content: center;
@@ -331,6 +406,14 @@ body {
     background-color: rgba(255, 255, 255, 0.06);
 }
 
+.badge svg {
+  transition: transform 0.3s ease;
+}
+
+.badge:hover svg {
+  transform: translateX(3px);
+}
+
 .badge-accent {
   color: var(--color-text);
   font-weight: 600;
@@ -355,6 +438,12 @@ body {
     display: flex;
     justify-content: center;
     gap: 40px;
+}
+
+.btn-lg {
+  padding: 0.85rem 1.8rem;
+  font-size: 15.5px;
+  border-radius: 8px;
 }
 
 .btn-secondary {
@@ -396,6 +485,13 @@ body {
   background-color: var(--color-surface);
   border-radius: var(--radius-lg);
   overflow: hidden;
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s ease;
+  will-change: transform;
+}
+
+.app-window:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 80px -30px rgba(232, 86, 47, 0.35);
 }
 
 .app-window::before {
@@ -532,6 +628,13 @@ body {
   border: 1px solid var(--color-border);
   border-radius: 12px;
   padding: 18px 20px;
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-border-light);
+  box-shadow: 0 12px 30px -14px rgba(232, 86, 47, 0.3);
 }
 
 .stat-label {
@@ -601,6 +704,15 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
+  padding: 6px 8px;
+  margin: 0 -8px;
+  border-radius: 8px;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+}
+
+.activity-list li:hover {
+  background-color: var(--color-surface-hover);
+  transform: translateX(2px);
 }
 
 .activity-list li div {
@@ -658,20 +770,43 @@ body {
 
 .bar {
   flex: 1;
-  height: var(--h);
-  min-height: 4px;
+  height: 0;
+  min-height: 0;
   border-radius: 4px 4px 0 0;
   background: linear-gradient(
     to top,
     #c60d0d03 0%,
     var(--color-text-muted) 100%
   );
-  transition: opacity 0.3s ease;
+  transition: height 0.9s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s ease, background 0.3s ease;
+}
+
+.chart-card.is-visible .bar {
+  height: var(--h);
+  min-height: 4px;
 }
 
 .bar:hover {
-  opacity: 0.8;
+  opacity: 0.85;
+  background: linear-gradient(
+    to top,
+    #c60d0d03 0%,
+    var(--color-accent) 100%
+  );
 }
+
+.chart-bars .bar:nth-child(1)  { transition-delay: 0.03s; }
+.chart-bars .bar:nth-child(2)  { transition-delay: 0.06s; }
+.chart-bars .bar:nth-child(3)  { transition-delay: 0.09s; }
+.chart-bars .bar:nth-child(4)  { transition-delay: 0.12s; }
+.chart-bars .bar:nth-child(5)  { transition-delay: 0.15s; }
+.chart-bars .bar:nth-child(6)  { transition-delay: 0.18s; }
+.chart-bars .bar:nth-child(7)  { transition-delay: 0.21s; }
+.chart-bars .bar:nth-child(8)  { transition-delay: 0.24s; }
+.chart-bars .bar:nth-child(9)  { transition-delay: 0.27s; }
+.chart-bars .bar:nth-child(10) { transition-delay: 0.3s; }
+.chart-bars .bar:nth-child(11) { transition-delay: 0.33s; }
+.chart-bars .bar:nth-child(12) { transition-delay: 0.36s; }
 
 
 .app-window {
@@ -761,12 +896,20 @@ body {
 }
 
 .section-title {
-  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-size: clamp(1.9rem, 4vw, 2.5rem);
   font-weight: 700;
   letter-spacing: -0.5px;
   font-family: var(--font-display), sans-serif;
   color: var(--color-text);
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 32px;
+}
+
+.features_container .section-title {
+  text-align: left;
   margin: 0 0 32px;
+  max-width: none;
 }
 
 /* 12-колоночная сетка для гибкого контроля ширины без взрыва вёрстки */
@@ -910,7 +1053,8 @@ body {
 .section-title-features {
   display: flex;
   justify-content: center;
-  font-size: 3rem;
+  text-align: center;
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
   font-weight: 600;
 }
 
@@ -945,12 +1089,6 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding-top: clamp(200px, 5vw, 350px);
-}
-
-.trust-container {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding-top: clamp(200px, 5vw, 350px);
   position: relative;
   overflow: hidden;
 }
@@ -958,7 +1096,7 @@ body {
 .trust-title {
   display: flex;
   justify-content: center;
-  font-size: 4rem;
+  font-size: clamp(2.2rem, 5vw, 4rem);
   font-weight: 600;
   max-width: 900px;
   margin: 0 auto;
@@ -1054,7 +1192,7 @@ body {
 }
 
 .impression-title {
-  font-size: 3rem;
+  font-size: clamp(1.9rem, 4.5vw, 3rem);
   padding: 40px;
   display: flex;
   justify-content: center;
@@ -1152,15 +1290,6 @@ body {
 
 .testimonials {
   padding: clamp(60px, 8vw, 120px) 0;
-}
-
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 600;
-  text-align: center;
-  color: var(--color-text);
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 .section-subtitle {
@@ -1704,5 +1833,286 @@ body {
   .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+/* ===================================================================
+   ДОПОЛНИТЕЛЬНАЯ ПОЛИРОВКА: МИКРО-ВЗАИМОДЕЙСТВИЯ
+   =================================================================== */
+
+/* --- Карточки фич: лёгкое увеличение картинки и подъём карточки --- */
+.feature-card {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-border-light);
+  box-shadow: 0 24px 60px -24px rgba(232, 86, 47, 0.4);
+}
+
+.feature-visual img {
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.feature-card:hover .feature-visual img {
+  transform: scale(1.06);
+}
+
+/* --- Мини-фичи: иконка окрашивается акцентом при наведении --- */
+.mini-feature {
+  padding: 18px;
+  margin: -18px;
+  border-radius: 14px;
+  transition: background-color 0.35s ease, transform 0.35s ease;
+}
+
+.mini-feature:hover {
+  background-color: var(--color-surface-hover);
+  transform: translateY(-3px);
+}
+
+.card-title svg {
+  transition: stroke 0.35s ease, transform 0.35s ease;
+}
+
+.card-title svg path {
+  transition: stroke 0.35s ease;
+}
+
+.mini-feature:hover .card-title svg path {
+  stroke: var(--color-accent-hover);
+}
+
+.mini-feature:hover .card-title svg {
+  transform: scale(1.12) rotate(-4deg);
+}
+
+/* --- Технологический список: лёгкая подсветка иконок --- */
+.listtech {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.listtech:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+/* --- Планета: медленное дыхание свечения --- */
+@keyframes planet-breathe {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.015); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .planet-img {
+    animation: planet-breathe 8s ease-in-out infinite;
+  }
+}
+
+/* --- Preview-item: иконка галочки слегка пульсирует при hover --- */
+.preview-item .check svg {
+  transition: transform 0.3s ease;
+}
+
+.preview-item:hover .check {
+  background-color: rgba(232, 86, 47, 0.18);
+}
+
+.preview-item:hover .check svg {
+  transform: scale(1.15);
+}
+
+/* --- Футер: подчёркивание "выезжает" слева --- */
+.footer-col a {
+  position: relative;
+  width: fit-content;
+}
+
+.footer-col a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-text);
+  transition: width 0.3s ease;
+}
+
+.footer-col a:hover::after {
+  width: 100%;
+}
+
+/* --- FAQ: плавное появление ответа --- */
+.faq-item p {
+  animation: hero-rise 0.35s ease both;
+}
+
+.faq-item summary {
+  transition: color 0.25s ease, padding-left 0.25s ease;
+}
+
+.faq-item summary:hover {
+  color: var(--color-text-hover);
+  padding-left: 4px;
+}
+
+/* ===================================================================
+   ГЛОБАЛЬНАЯ СИСТЕМА SCROLL-REVEAL
+   Классы навешиваются скриптом внизу index.html через IntersectionObserver
+   =================================================================== */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(26px);
+}
+
+.reveal-up.is-visible {
+  animation: reveal-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes reveal-in {
+  from { opacity: 0; transform: translateY(26px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-up,
+  .badge-wrapper,
+  .hero-title,
+  .hero-subtitle,
+  .hero-actions,
+  .app-preview,
+  .planet-img,
+  .faq-item p {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+
+/* ===================================================================
+   ДОПОЛНИТЕЛЬНЫЙ АДАПТИВ (закрываем пробелы в существующих медиа-запросах)
+   =================================================================== */
+
+/* ---- Планшеты, 1024px ---- */
+@media (max-width: 1024px) {
+  .app-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .preview-split {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .preview-split .app-preview {
+    width: 100%;
+  }
+}
+
+/* ---- Планшеты/малые ноутбуки, 900px ---- */
+@media (max-width: 900px) {
+  .app-topbar {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .app-search {
+    order: 3;
+    width: 100%;
+  }
+
+  .app-search input {
+    width: 100%;
+  }
+
+  .app-tabs {
+    display: none;
+  }
+
+  .tech-list {
+    flex-wrap: wrap;
+    gap: 24px 40px;
+  }
+}
+
+/* ---- Телефоны, 640px ---- */
+@media (max-width: 640px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .btn-lg {
+    width: 100%;
+  }
+
+  .stat-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .app-body {
+    padding: 20px 16px;
+  }
+
+  .app-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .app-header-actions {
+    flex-wrap: wrap;
+  }
+
+  .impression-title {
+    padding: 24px 16px;
+  }
+
+  .impression-subtitle {
+    font-size: 1.05rem;
+    padding: 0 16px;
+  }
+
+  .preview-item {
+    padding: 14px 16px;
+  }
+
+  .cta-block {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .section-title-features {
+    padding: 0 16px;
+  }
+
+  .mini-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---- Совсем маленькие экраны, 400px ---- */
+@media (max-width: 400px) {
+  .hero-title {
+    font-size: 2.1rem;
+  }
+
+  .badge {
+    font-size: 0.75rem;
+    padding: 6px 6px 6px 12px;
+  }
+
+  .price-value {
+    font-size: 32px;
   }
 }
