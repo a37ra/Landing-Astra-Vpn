@@ -2,7 +2,7 @@
 
 # Astra VPN — Landing Page
 
-Свобода без границ. Быстрый, приватный и красивый VPN-лендинг.
+Быстрый, приватный и красивый VPN-лендинг.
 
 **[🔗 Смотреть демо на GitHub Pages](https://a37ra.github.io/Landing-Astra-Vpn/)**
 
